@@ -15,7 +15,7 @@
 ## NORMAS DE TRABAJO EN EL LABORATORIO
 
 <details>
-<summary><strong>Hacer click aquí para desplegar información sobre normas de trabajo en el laboratorio</strong></summary>
+<summary><strong>Click aquí para desplegar información sobre normas de trabajo en el laboratorio</strong></summary>
 <br>
 
 1. La asistencia y puntualidad a las sesiones del laboratorio son obligatorias.
@@ -35,7 +35,7 @@
 ## FECHAS DE LAS PRÁCTICAS DE LABORATORIO
 
 <details>
-<summary><strong>Hacer click aquí para desplegar información sobre normas fechas de las prácticas de laboratorio</strong></summary>
+<summary><strong>Click aquí para desplegar información sobre fechas de las prácticas de laboratorio</strong></summary>
 <br>
 
 <div align="center">
@@ -59,7 +59,7 @@
 
 
 <details>
-<summary><strong>Hacer click aquí para desplegar información sobre evaluación del curso</strong></summary>
+<summary><strong>Click aquí para desplegar información sobre evaluación del curso</strong></summary>
 <br>
 
 <div align="center">
@@ -85,7 +85,7 @@
 ## CUADERNO DE PROTOCOLO
 
 <details>
-<summary><strong>Hacer click aquí para desplegar información sobre el cuaderno de protocolo</strong></summary>
+<summary><strong>Click aquí para desplegar información sobre el cuaderno de protocolo</strong></summary>
 <br>
 
 El cuaderno de protocolo es una de las estrategias de resolución dirigida a evitar una actividad próxima al simple «ensayo y error». En este se presenta una planificación previa, pero no pretende imponer un proceso rígido: los alumnos (y los científicos) conciben en ocasiones las estrategias de resolución a medida que avanzan, no estando exentos de tener que volver atrás a buscar otro camino.
@@ -135,7 +135,7 @@ Las estrategias de resolución son, en cierta medida, el equivalente a los dise�
 ## DIAGRAMA EN V DE GOWIN
 
 <details>
-<summary><strong>Hacer click aquí para desplegar información sobre el diagrama en V de Gowin.</strong>
+<summary><strong>Click aquí para desplegar información sobre el diagrama en V de Gowin.</strong>
 </summary>
 <br>
 
@@ -169,7 +169,7 @@ Permite:
 ## INFORME TIPO ARTÍCULO CIENTÍFICO
 
 <details>
-<summary><strong>Hacer click aquí para desplegar información sobre el informe tipo artículo científico.</strong>
+<summary><strong>Click aquí para desplegar información sobre el informe tipo artículo científico.</strong>
 </summary>
 <br>
 

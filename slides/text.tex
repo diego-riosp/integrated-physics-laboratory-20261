@@ -1,3 +1,130 @@
-\begin{frame}{Frame 1}
-    
+\begin{frame}
+    \begin{center}
+        \Huge \textbf{Incertidumbres y propagación de errores}
+    \end{center}
 \end{frame}
+
+\begin{frame}{Errores en la medida}
+Se distinguen tres tipos de imprecisiones al tomar medidas:
+
+\begin{itemize}
+    \item \textbf{Errores de escala:} Asociados a la precisión (resolución) del instrumento.
+    \item \textbf{Errores sistemáticos:} Originados por fallas del sistema o instrumentos descalibrados.
+    \item \textbf{Errores aleatorios:} Debidos a variaciones impredecibles en mediciones repetidas.
+\end{itemize}
+
+Toda medida experimental debe expresarse como:
+\[
+x = \bar{x} \pm \Delta x
+\]
+donde $\Delta x$ representa la incertidumbre asociada.
+\end{frame}
+
+%-------------------------------------------------
+\begin{frame}{Estimación del error aleatorio}
+Para un conjunto de $n$ mediciones repetidas $x_i$, la desviación típica se calcula como:
+
+\begin{equation}
+\Delta x = \sqrt{\frac{1}{n}\sum_{i=1}^{n} (x_i - \bar{x})^2}
+\end{equation}
+
+donde el valor promedio es:
+
+\begin{equation}
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
+\end{equation}
+\end{frame}
+
+%-------------------------------------------------
+\begin{frame}{Registro de una medida}
+Una medida se expresa como:
+
+\[
+A = \bar{A} \pm \Delta A
+\]
+
+El valor real se encuentra con alta probabilidad en el intervalo:
+
+\[
+(\bar{A} - \Delta A, \, \bar{A} + \Delta A)
+\]
+
+\textbf{Ejemplo:}  
+Si se mide una longitud como $12.3$ cm con resolución $0.1$ cm:
+
+\[
+(12.3 \pm 0.1)\,\text{cm}
+\]
+
+Intervalo probable:
+\[
+(12.2,\; 12.4)\,\text{cm}
+\]
+\end{frame}
+
+%-------------------------------------------------
+\begin{frame}{Error relativo}
+El error relativo permite evaluar la exactitud de una medida:
+
+\begin{equation}
+E_m = \left| \frac{M - m}{m} \right|
+\end{equation}
+
+donde:
+\begin{itemize}
+    \item $M$ es el valor aceptado,
+    \item $m$ es el valor medido experimentalmente.
+\end{itemize}
+
+Suele expresarse también en porcentaje.
+\end{frame}
+
+\begin{frame}{Operaciones de cantidades con error}
+
+Es frecuente tener que operar con dos o más valores experimentales al momento de obtener una variable física. Por ejemplo, determinar el perímetro de un rectángulo implicaría sumar las longitudes de cada lado; para determinar su área debemos multiplicar las longitudes de cada lado. Como cada medida tiene un error experimental, el resultado de la suma o el producto también debe tener asociada una incertidumbre experimental. Dependiendo del tipo de operación matemática y el tipo de error en la medida, se deben seguir reglas para obtener el resultado final de incertidumbre en la medida. 
+\end{frame}
+\begin{frame}
+    Para el caso de errores de escala, a continuación se muestra cómo obtener la incertidumbre en la medida cuando se realizan algunos tipos de operaciones matemáticas básicas como suma, resta, producto y división de cantidades con error:
+    \begin{align}
+\Delta x^n &= |n|\, x^{n-1} \Delta x\,,  \\
+\Delta(x \pm y) &= \Delta x + \Delta y\,,  \\
+\Delta(xy) &= xy \left( \frac{\Delta x}{x} + \frac{\Delta y}{y} \right)\,,  \\
+\Delta\left(\frac{x}{y}\right) &= \frac{x}{y} \left( \frac{\Delta x}{x} + \frac{\Delta y}{y} \right)\,,  \\
+\Delta(x^n y^m) &= x^n y^m \left( |n| \frac{\Delta x}{x} + |m| \frac{\Delta y}{y} \right)\,, 
+\end{align}
+donde $x$ y $y$ representan las magnitudes físicas medidas directamente con el instrumento.
+\end{frame}
+
+\begin{frame}
+    Ahora, si los errores son de carácter aleatorio la forma correcta de estimar el error de la medida es la siguiente:
+\begin{align}
+\Delta x^n &= |n|\, x^{n-1} \Delta x\,,  \\
+\Delta(x \pm y) &= \sqrt{(\Delta x)^2 + (\Delta y)^2}\,,  \\
+\Delta(xy) &= xy \sqrt{\left( \frac{\Delta x}{x} \right)^2 + \left( \frac{\Delta y}{y} \right)^2}\,,  \\
+\Delta\left(\frac{x}{y}\right) &= \frac{x}{y} \sqrt{\left( \frac{\Delta x}{x} \right)^2 + \left( \frac{\Delta y}{y} \right)^2}\,,  \\
+\Delta(x^n y^m) &= x^n y^m \sqrt{\left( n \frac{\Delta x}{x} \right)^2 + \left( m \frac{\Delta y}{y} \right)^2}\,.
+\end{align}
+\end{frame}
+
+
+\begin{frame}
+    De forma general, se puede obtener la incertidumbre en cualquier operación matemática a partir de la definición de derivada parcial. Si una magnitud $f$ depende de dos variables observables $x$ y $y$ con $x = \bar{x} \pm \Delta x$ y $y = \bar{y} \pm \Delta y$, tendremos $f = f \pm \Delta f$, donde la incertidumbre $\Delta f$ para error de escala se obtiene a partir de la siguiente definición derivada parcial:
+\begin{equation}
+\Delta f = \left| \frac{\partial f}{\partial x} \right| \Delta x 
++ \left| \frac{\partial f}{\partial y} \right| \Delta y\,.
+\end{equation}
+\end{frame}
+
+\begin{frame}
+    Si es un error aleatorio, se determina de la siguiente forma:
+\begin{equation}
+\Delta f = \sqrt{
+\left( \frac{\partial f}{\partial x} \Delta x \right)^2 +
+\left( \frac{\partial f}{\partial y} \Delta y \right)^2
+}\,.
+\end{equation}
+\end{frame}
+
+
+
+

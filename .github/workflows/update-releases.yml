@@ -19,17 +19,17 @@ jobs:
       - name: Compile Slides
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: slides/main.tex
+          root_file: slides/main-slides.tex
 
       - name: Compile First Workshop
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: practice-1/main.tex
+          root_file: practice-1/main-practice-1.tex
 
       - name: Check PDFs
         run: |
-          test -f slides/main.pdf
-          test -f practice-1/main.pdf
+          test -f ./main-slides.pdf
+          test -f ./main-practice-1.pdf
 
       - name: Create Release
         id: create_release
@@ -48,7 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: slides/main.pdf
+          asset_path: ./main-slides.pdf
           asset_name: lectures-slides-${{ github.ref_name }}.pdf
           asset_content_type: application/pdf
 
@@ -58,6 +58,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: practice-1/main.pdf
-          asset_name: practice-1-${{ github.ref_name }}.pdf
+          asset_path: ./main-practice-1.pdf
+          asset_name: practice-1.pdf
           asset_content_type: application/pdf

@@ -1,46 +1,304 @@
+\section*{Práctica de laboratorio: Instrumentos de medida, incertidumbre y densidad}
+
 \section*{Objetivos}
 
 \begin{itemize}
-    \item Comprender el proceso de medición y expresar correctamente el resultado de una medida.
-    \item Calcular el error propagado y la incertidumbre de una medición.
-    \item Entender promedios y estadísticas que se pueden realizar con medidas tomadas por los equipos de medida.
+\item Comprender el proceso físico de medición como una interacción entre el instrumento, el observador y el sistema medido.
+\item Identificar la resolución, precisión y limitaciones de distintos instrumentos de medida (gramera, pie de rey y tornillo micrométrico).
+\item Expresar correctamente los resultados experimentales utilizando notación científica, cifras significativas e incertidumbres.
+\item Calcular incertidumbres instrumentales (de escala) e incertidumbres estadísticas.
+\item Aplicar propagación de errores en magnitudes derivadas como volumen y densidad.
+\item Analizar datos experimentales mediante promedios, desviaciones estándar y regresión lineal.
 \end{itemize}
 
 \section*{Conceptos a estudiar}
 
-Uso adecuado de instrumentos de medida y propagación de errores.
+\begin{itemize}
+\item Medición física y error experimental.
+\item Resolución y precisión instrumental.
+\item Incertidumbre de escala e incertidumbre estadística.
+\item Propagación de incertidumbres.
+\item Cifras significativas y redondeo.
+\item Promedios, desviación estándar y distribuciones gaussianas.
+\item Ajuste lineal y significado físico de la pendiente.
+\end{itemize}
 
-\section*{Procedimiento}
+\section*{Fundamento teórico}
 
-Medir masa y volumen de objetos con distintas formas geométricas para obtener su densidad por el método geométrico, usando la relación:
+La densidad de un cuerpo se define como la razón entre su masa y su volumen:
 
 \begin{equation}
-\rho \pm \Delta\rho = \frac{m \pm \Delta m}{V \pm \Delta V}
+\rho = \frac{m}{V}
+\end{equation}
+
+Cuando las magnitudes medidas tienen incertidumbre, el resultado debe expresarse como:
+
+\begin{equation}
+\rho \pm \Delta \rho = \frac{m \pm \Delta m}{V \pm \Delta V}
 \label{eq:densidad}
 \end{equation}
 
-Siendo $\rho$ la densidad del objeto, $m$ y $V$ su masa y volumen, respectivamente.
+La incertidumbre en la densidad se obtiene mediante propagación de errores, considerando las incertidumbres instrumentales asociadas a cada medición.
 
 \rule{\textwidth}{1pt}
 
-\section*{Actividad 1: Densidad}
-
-\textbf{Materiales:} Flexómetro, pie de rey, balanza digital, balanza analógica, tornillo micrométrico, cronómetro, beaker.
+\section*{Instrumentos disponibles}
 
 \begin{itemize}
-    \item Medir la masa y volumen de cada objeto reportando cada medida con su correspondiente incertidumbre (de acuerdo a la precisión del instrumento de medida).
-    \item Aplicando la ecuación (\ref{eq:densidad}), determinar la densidad de los objetos. Propagar errores para reportar la incertidumbre de la densidad (ver guía de manejo de errores).
-    \item Utilizar criterios de redondeo para expresar los resultados con la apropiada cantidad de cifras significativas.
-    \item Si se conoce el material del objeto, determinar el error relativo porcentual.
+\item Gramera (balanza digital)
+\item Pie de rey (calibrador vernier)
+\item Tornillo micrométrico
 \end{itemize}
 
-
-\textbf{Preguntas orientadoras:}
-\begin{itemize}
-    \item ¿Qué quieren decir cada uno de los errores calculados?
-    \item ¿Cómo se relacionan?
-    \item ¿Cómo nos ayudan a obtener conclusiones?
-\end{itemize}
-
+Cada estudiante deberá seleccionar el instrumento más adecuado según la magnitud y el tamaño del objeto a medir.
 
 \rule{\textwidth}{1pt}
+
+\section*{Actividad 1: Determinación de densidad por método geométrico}
+
+\textbf{Objetivo:} Determinar la densidad de distintos objetos sólidos a partir de mediciones directas de masa y dimensiones geométricas, incluyendo sus respectivas incertidumbres.
+
+\subsection*{Objetos}
+
+\begin{itemize}
+\item Cilindro
+\item Esfera
+\item Tuerca
+\item Cubo
+\end{itemize}
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item Medir la masa de cada objeto utilizando la gramera.
+\item Medir las dimensiones geométricas necesarias (diámetros, longitudes, espesores) usando el pie de rey o el tornillo micrométrico, según corresponda.
+\item Calcular el volumen de cada objeto usando las fórmulas geométricas apropiadas.
+\item Asignar a cada medición su incertidumbre de escala de acuerdo con la resolución del instrumento.
+\item Calcular la densidad de cada objeto utilizando la ecuación (\ref{eq:densidad}).
+\item Propagar las incertidumbres para obtener $\Delta V$ y $\Delta \rho$.
+\item Expresar todos los resultados con cifras significativas correctas y notación científica.
+\item Si se conoce el material del objeto, calcular el error relativo porcentual entre el valor experimental y el valor tabulado.
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+Para cada objeto se debe reportar:
+
+\begin{itemize}
+\item Masa: $m \pm \Delta m$
+\item Volumen: $V \pm \Delta V$
+\item Densidad: $\rho \pm \Delta \rho$
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Actividad 2: Análisis estadístico y regresión lineal}
+
+\textbf{Objetivo:} Estudiar la consistencia experimental de la densidad de un mismo material y su relación lineal masa--volumen.
+
+\subsection*{Sistema}
+
+9 cubos de madera del mismo material.
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item Medir la masa y las dimensiones de cada cubo.
+\item Calcular el volumen y la densidad de cada uno, incluyendo las incertidumbres de escala.
+\item Calcular la densidad promedio del conjunto de cubos.
+\item Construir una gráfica de masa vs volumen para los 9 cubos, incluyendo barras de error instrumentales.
+\item Realizar un ajuste lineal del tipo:
+
+
+\begin{equation}
+m = \rho \, V
+\end{equation}
+
+\item Interpretar físicamente la pendiente de la recta como la densidad del material.
+\item Comparar:
+\begin{itemize}
+    \item La densidad promedio calculada directamente.
+    \item La densidad obtenida como pendiente del ajuste lineal.
+\end{itemize}
+\item Analizar la consistencia entre ambos valores dentro de sus respectivas incertidumbres.
+
+
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Tabla de datos experimentales.
+\item Gráfica $m$ vs $V$ con barras de error.
+\item Ecuación de la recta ajustada.
+\item Valor de la densidad por promedio y por regresión.
+\item Análisis comparativo e interpretación física.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Actividad 3: Distribución estadística de la densidad (monedas de $50$ COP)}
+
+\textbf{Objetivo:} Analizar estadísticamente la densidad de un conjunto grande de objetos idénticos y estudiar su distribución.
+
+\subsection*{Sistema experimental}
+
+\begin{itemize}
+\item 30 monedas de $50$ COP (nueva generación) por equipo.
+\item 7 equipos de trabajo.
+\end{itemize}
+
+Total de datos:
+
+\begin{itemize}
+\item 210 mediciones de masa.
+\item 7 mediciones de volumen.
+\end{itemize}
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item Cada equipo mide la masa de sus 30 monedas (reportar \href{https://docs.google.com/spreadsheets/d/1CiCF3MJgho7KHePhqMUMBFrn_ewDAEySctYWGPo965I/edit?usp=sharing}{aquí} las mediciones).
+\item Cada equipo selecciona aleatoriamente una moneda y mide su volumen mediante medición de diámetro y espesor con tornillo micrométrico.
+\item Se calcula el volumen de cada una de las 7 monedas medidas.
+\item Se obtiene el volumen promedio $\bar{V}$ del conjunto.
+\item Se calcula la densidad de cada una de las 210 monedas usando:
+
+
+\begin{equation}
+\rho_i = \frac{m_i}{\bar{V}}
+\end{equation}
+
+\item Se construye la distribución de densidades del conjunto.
+\item Se calcula la media y la desviación estándar de la densidad (incertidumbre estadística).
+\item Se construye el histograma de densidad.
+\item Se ajusta una distribución gaussiana teórica a los datos.
+
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Histograma de densidad.
+\item Curva gaussiana ajustada.
+\item Valor medio de la densidad.
+\item Desviación estándar.
+\item Interpretación estadística de la dispersión de los datos.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Preguntas orientadoras generales}
+
+\begin{itemize}
+\item ¿Qué representa físicamente la incertidumbre de una medición?
+\item ¿Cuál es la diferencia entre incertidumbre instrumental e incertidumbre estadística?
+\item ¿Por qué diferentes métodos pueden producir valores distintos de densidad?
+\item ¿Cuándo dos resultados experimentales pueden considerarse compatibles?
+\item ¿Qué información física aporta la forma de una distribución gaussiana?
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Actividad 4: Determinación de $g$ en plano inclinado (incertidumbre estadística y de escala)}
+
+\textbf{Objetivo:} Profundizar en el concepto de incertidumbre estadística asociada al tiempo de reacción humano y combinarla con incertidumbres instrumentales en la determinación experimental de la aceleración gravitacional.
+
+\subsection*{Sistema experimental}
+
+\begin{itemize}
+\item Plano inclinado con medidor de ángulo incorporado
+\item Regla o cinta métrica
+\item Cronómetro
+\item Objeto deslizante o rodante
+\end{itemize}
+
+El ángulo del plano debe fijarse en:
+
+\begin{equation}
+\theta = 10^\circ
+\end{equation}
+
+La aceleración gravitacional se determinará a partir de la relación:
+
+\begin{equation}
+g = \frac{2 d \sin(\theta)}{t^2}
+\label{eq:g}
+\end{equation}
+
+donde $d$ es la longitud del plano inclinado, $\theta$ el ángulo de inclinación y $t$ el tiempo de recorrido.
+
+\subsection*{Mediciones}
+
+\begin{itemize}
+\item $d$: medida con regla. Incertidumbre: \textbf{incertidumbre de escala}.
+\item $\theta$: dado por el medidor angular del plano. Incertidumbre: \textbf{incertidumbre de escala}.
+\item $t$: medido con cronómetro. Incertidumbre: \textbf{incertidumbre estadística} (desviación estándar).
+\end{itemize}
+
+\subsection*{Diseño experimental}
+
+Cada equipo deberá escoger una de las siguientes dos opciones:
+
+\subsubsection*{Opción A: Variación de longitud}
+
+\begin{itemize}
+\item Seleccionar tres longitudes diferentes del plano: $d_1, d_2, d_3$.
+\item Para cada longitud, medir el tiempo de recorrido del objeto \textbf{40 veces}.
+\item Calcular para cada $d_i$:
+\begin{itemize}
+\item Tiempo promedio $\bar{t}i$
+\item Desviación estándar $\sigma{t_i}$
+\item Valor de $g_i$ usando la ecuación (\ref{eq:g})
+\end{itemize}
+\end{itemize}
+
+\subsubsection*{Opción B: Longitud fija}
+
+\begin{itemize}
+\item Seleccionar una única longitud fija $d$.
+\item Medir el tiempo de recorrido del objeto \textbf{150 veces}.
+\item Calcular:
+\begin{itemize}
+\item Tiempo promedio $\bar{t}$
+\item Desviación estándar $\sigma_t$
+\item Valor de $g$ usando la ecuación (\ref{eq:g})
+\end{itemize}
+\end{itemize}
+
+\subsection*{Análisis de incertidumbre}
+
+\begin{itemize}
+\item La incertidumbre en $t$ se toma como la desviación estándar de la muestra (incertidumbre estadística).
+\item Las incertidumbres en $d$ y $\theta$ se toman como incertidumbres de escala.
+\item La incertidumbre total en $g$ se obtiene mediante propagación de errores combinando incertidumbre estadística e instrumental.
+\end{itemize}
+
+\subsection*{Comparación con valor de referencia}
+
+El valor experimental obtenido debe compararse con el valor de referencia local:
+
+\begin{equation}
+g_{\text{ref}} = 9.76\, \text{m/s}^2
+\end{equation}
+
+medido por la Universidad Nacional de Colombia en Medellín.
+
+Se debe calcular el error relativo porcentual y analizar la compatibilidad del valor experimental con el valor de referencia dentro de las incertidumbres.
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Tabla de tiempos individuales.
+\item Histogramas de distribución de tiempos con fit gaussiano.
+\item Valor promedio de $t$ y desviación estándar.
+\item Valor de $g$ con incertidumbre total.
+\item Comparación cuantitativa con $g_{\text{ref}}$.
+\item Discusión sobre la influencia del tiempo de reacción en la medición.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Conclusión esperada}
+
+Al finalizar la práctica, el estudiante deberá ser capaz de interpretar la medición como un proceso físico con límites instrumentales y estadísticos, comprender el significado real de la incertidumbre experimental y analizar datos no solo como números, sino como información física con estructura, dispersión y significado.

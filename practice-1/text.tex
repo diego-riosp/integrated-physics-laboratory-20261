@@ -299,6 +299,120 @@ Se debe calcular el error relativo porcentual y analizar la compatibilidad del v
 
 \rule{\textwidth}{1pt}
 
+\section*{Actividad 5: Dimensión fractal y densidad no euclidiana de materiales (papel compactado)}
+
+\textbf{Objetivo:} Introducir el concepto de dimensión fractal como herramienta física para describir objetos que no ocupan completamente el espacio, y determinar experimentalmente la dimensión fractal y densidad efectiva del papel compactado.
+
+\subsection*{Motivación física}
+
+La medición de densidad mediante métodos geométricos o por el principio de Arquímedes no es adecuada para sistemas como una hoja de papel, debido a su estructura porosa, delgada y no homogénea. En estos casos, el objeto no ocupa el espacio de forma euclidiana tridimensional completa.
+
+Por ello, se introduce el concepto de 	\textbf{dimensión fractal}, que cuantifica qué tan densamente un objeto ocupa el espacio métrico en el que está inmerso.
+
+\subsection*{Fundamento teórico}
+
+Para una esfera de diámetro $D$, masa $M$ y densidad $\rho$, se tiene:
+
+\begin{equation}
+D = \left(\frac{6M}{\pi \rho}\right)^{1/3} = k M^{1/3}
+\end{equation}
+
+que puede escribirse de forma general como:
+
+\begin{equation}
+D = k M^{1/d}
+\label{eq:fractal}
+\end{equation}
+
+donde $d$ es la dimensión fractal del objeto.
+
+Aplicando logaritmo natural:
+
+\begin{equation}
+\ln D = \ln k + \frac{1}{d} \ln M
+\label{eq:logfractal}
+\end{equation}
+
+que corresponde a la ecuación de una recta:
+
+\begin{equation}
+y = b + m x
+\end{equation}
+
+con:
+
+\begin{equation}
+m = \frac{1}{d}, \qquad b = \ln k
+\end{equation}
+
+De esta forma, la pendiente de la recta permite determinar la dimensión fractal $d$.
+
+\subsection*{Sistema experimental}
+
+\begin{itemize}
+\item Hojas grandes de papel
+\item Regla
+\item Gramera
+\item Superficie de compactación
+\end{itemize}
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item A partir de una hoja grande de papel, cortar porciones de distintos tamaños.
+\item Compactar manualmente cada porción formando esferas de papel.
+\item Preparar al menos \textbf{6 esferas de papel} de diferente masa.
+\item Medir la masa $M$ de cada esfera.
+\item Medir el diámetro $D$ de cada esfera.
+\item Construir la gráfica $\ln D$ vs $\ln M$.
+\item Realizar un ajuste lineal de los datos.
+\item Determinar la pendiente $m$.
+\item Calcular la dimensión fractal:
+
+\begin{equation}
+d = \frac{1}{m}
+\end{equation}
+
+\item Usar el intersecto $b$ para determinar la constante $k$ y la densidad efectiva del papel.
+
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Gráfica $\ln D$ vs $\ln M$.
+\item Ajuste lineal.
+\item Valor experimental de la dimensión fractal $d$.
+\item Valor de densidad efectiva del papel.
+\end{itemize}
+
+Se espera obtener un valor aproximado:
+
+\begin{equation}
+2 < d < 3
+\end{equation}
+
+con un valor típico cercano a:
+
+\begin{equation}
+d \approx 2.5
+\end{equation}
+
+lo cual refleja que el papel compactado no ocupa completamente el volumen tridimensional.
+
+\subsection*{Interpretación física}
+
+\begin{itemize}
+\item Un valor $d=3$ corresponde a un objeto macizo y homogéneo.
+\item Un valor $d<3$ indica estructura porosa y ocupación parcial del espacio.
+\item La dimensión fractal cuantifica la complejidad estructural del material.
+\item La densidad obtenida es una densidad 	extbf{efectiva}, no una densidad volumétrica clásica.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
 \section*{Conclusión esperada}
 
 Al finalizar la práctica, el estudiante deberá ser capaz de interpretar la medición como un proceso físico con límites instrumentales y estadísticos, comprender el significado real de la incertidumbre experimental y analizar datos no solo como números, sino como información física con estructura, dispersión y significado.
+
+

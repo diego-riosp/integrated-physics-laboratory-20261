@@ -1,0 +1,298 @@
+\section*{Práctica de laboratorio: Cinemática galileana}
+
+\section*{Objetivos}
+
+\begin{itemize}
+\item Analizar experimentalmente el movimiento de proyectiles en dos dimensiones.
+\item Caracterizar experimentalmente un sistema de lanzamiento de proyectiles (mini lanzador).
+\item Determinar experimentalmente las variables cinemáticas asociadas al disparo de un proyectil: velocidad inicial, ángulo de lanzamiento y alcance.
+\item Estudiar el movimiento acelerado de un objeto que desciende por un plano inclinado.
+\item Determinar la aceleración del carro en función del ángulo de inclinación del plano.
+\item Integrar dos sistemas físicos independientes (lanzador y carro) para resolver un problema de interceptación entre proyectil y objeto en movimiento.
+\item Aplicar herramientas de análisis de video y sensores electrónicos para la obtención de datos experimentales.
+\item Diseñar estrategias experimentales de calibración para lograr que un proyectil impacte un objeto móvil.
+\end{itemize}
+
+\section*{Conceptos a estudiar}
+
+\begin{itemize}
+\item Movimiento parabólico de proyectiles.
+\item Descomposición del movimiento en componentes horizontal y vertical.
+\item Movimiento uniformemente acelerado.
+\item Movimiento en plano inclinado.
+\item Velocidad inicial y ángulo de lanzamiento.
+\item Alcance de un proyectil.
+\item Condiciones de intersección entre dos trayectorias.
+\item Calibración experimental de sistemas físicos.
+\item Análisis de movimiento mediante video (software Tracker).
+\item Medición mediante sensores electrónicos (Arduino).
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Fundamento teórico}
+
+El movimiento de un proyectil lanzado con velocidad inicial $v_0$ y ángulo $\theta$ respecto a la horizontal puede describirse separando el movimiento en dos componentes independientes.
+
+\subsection*{Movimiento horizontal}
+
+\begin{equation}
+x(t) = v_0 \cos\theta \; t
+\end{equation}
+
+En la dirección horizontal no existe aceleración (si se desprecia la resistencia del aire), por lo que la velocidad es constante.
+
+\subsection*{Movimiento vertical}
+
+\begin{equation}
+y(t) = v_0 \sin\theta \; t - \frac{1}{2} g t^2
+\end{equation}
+
+donde $g$ es la aceleración gravitacional.
+
+La trayectoria resultante es parabólica.
+
+\subsection*{Movimiento en plano inclinado}
+
+Cuando un objeto desciende por un plano inclinado de ángulo $\alpha$, la componente de la gravedad paralela al plano genera una aceleración:
+
+\begin{equation}
+a = g \sin\alpha
+\end{equation}
+
+Si el carro parte del reposo, su posición sobre la rampa se describe mediante:
+
+\begin{equation}
+x(t) = \frac{1}{2} a t^2
+\end{equation}
+
+\subsection*{Problema de interceptación}
+
+Cuando un proyectil es disparado hacia un objeto en movimiento, el impacto ocurre si ambos ocupan la misma posición espacial en el mismo instante de tiempo.
+
+Esto implica que:
+
+\begin{equation}
+x_{\text{proyectil}}(t) = x_{\text{carro}}(t)
+\end{equation}
+
+\begin{equation}
+y_{\text{proyectil}}(t) = y_{\text{carro}}(t)
+\end{equation}
+
+En esta práctica se caracterizarán ambos sistemas de manera independiente para posteriormente ajustar los parámetros experimentales y lograr que el proyectil impacte el carro mientras este desciende por la rampa.
+
+\rule{\textwidth}{1pt}
+
+\section*{Materiales}
+
+\begin{itemize}
+\item Patín de dinámica (carro)
+\item Plano inclinado
+\item Mini lanzador de proyectiles PASCO
+\item Balines metálicos
+\item Láminas de fórmica
+\item Cinta de enmascarar
+\item Metro o cinta métrica
+\item Cronómetro
+\item Cámara para análisis de video
+\item Computador con software \textbf{Tracker}
+\item Arduino con sensores de detección
+\end{itemize}
+
+Observación importante:
+
+El mini lanzador posee \textbf{tres niveles de potencia}. Debido a posibles variaciones mecánicas, algunos lanzadores pueden dispararse espontáneamente en ciertos niveles. Por esta razón se recomienda trabajar únicamente con \textbf{dos niveles de lanzamiento} como mínimo.
+
+\rule{\textwidth}{1pt}
+
+\section*{Actividad I: Caracterización del lanzador de proyectiles}
+
+\textbf{Objetivo:} Determinar experimentalmente las características cinemáticas del proyectil disparado por el mini lanzador para distintos niveles de potencia.
+
+\subsection*{Sistema experimental}
+
+El mini lanzador dispara un balín metálico con una velocidad inicial determinada por el nivel de potencia seleccionado. El proyectil describe una trayectoria parabólica bajo la acción de la gravedad.
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item Fijar el lanzador en una mesa o superficie estable.
+\item Ajustar el ángulo de lanzamiento a un valor fijo.
+\item Marcar en el suelo una cinta métrica para medir el alcance horizontal del proyectil.
+\item Colocar una lámina de fórmica o superficie lisa donde impactará el balín.
+\item Seleccionar el primer nivel de potencia del lanzador.
+\item Realizar al menos \textbf{10 disparos} y medir la distancia horizontal alcanzada en cada uno.
+\item Registrar los datos en una tabla.
+\item Repetir el procedimiento para un segundo nivel de potencia.
+\end{itemize}
+
+\textbf{Imperativo:}
+
+\begin{itemize}
+\item Grabar el movimiento del proyectil con una cámara.
+\item Analizar el video con el software \textbf{Tracker}.
+\item Obtener la velocidad inicial y la trayectoria experimental del proyectil.
+\end{itemize}
+
+\subsection*{Análisis de datos}
+
+Para cada nivel de potencia:
+
+\begin{itemize}
+\item Calcular el alcance promedio.
+\item Determinar la desviación estándar del alcance.
+\item Estimar la velocidad inicial del proyectil utilizando las ecuaciones del movimiento parabólico.
+\item Comparar los resultados obtenidos mediante medición directa y análisis de video.
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Tabla o histograma de distancias de impacto.
+\item Alcance promedio del proyectil.
+\item Estimación de la velocidad inicial del balín.
+\item Trayectoria parabólica obtenida con Tracker.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Actividad II: Caracterización del objeto móvil en el plano inclinado}
+
+\textbf{Objetivo:} Determinar experimentalmente la aceleración del carro que desciende por el plano inclinado.
+
+\subsection*{Sistema experimental}
+
+Un carro se coloca sobre un plano inclinado y se deja deslizar desde el reposo.
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item Ajustar el ángulo del plano inclinado a un valor determinado.
+\item Medir la longitud total del plano inclinado.
+\item Marcar varias posiciones sobre la rampa utilizando cinta de enmascarar.
+\item Colocar el carro en reposo en la parte superior del plano.
+\item Liberar el carro sin empujarlo.
+\item Medir el tiempo que tarda en recorrer distintas distancias sobre la rampa.
+\item Repetir cada medición al menos \textbf{10 veces}.
+\end{itemize}
+
+\textbf{Utilizar:}
+
+\begin{itemize}
+\item Un sensor conectado al Arduino para registrar automáticamente los tiempos de paso del carro.
+\item Análisis de video mediante Tracker.
+\end{itemize}
+
+\subsection*{Análisis de datos}
+
+\begin{itemize}
+\item Construir una tabla de distancia recorrida vs tiempo.
+\item Graficar $x$ vs $t^2$.
+\item Ajustar una recta del tipo:
+
+\begin{equation}
+x = \frac{1}{2} a t^2
+\end{equation}
+
+\item Determinar la aceleración del carro a partir de la pendiente.
+\item Comparar el valor obtenido con el valor teórico:
+
+\begin{equation}
+a = g \sin\alpha
+\end{equation}
+
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Tabla de tiempos medidos.
+\item Gráfica $x$ vs $t^2$.
+\item Ajuste lineal.
+\item Valor experimental de la aceleración del carro.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Actividad III: Impacto sobre objeto en movimiento}
+
+\textbf{Objetivo:} Ajustar experimentalmente los parámetros del sistema para lograr que el proyectil impacte el carro mientras este desciende por la rampa.
+
+\subsection*{Sistema experimental}
+
+Se combinan los dos sistemas estudiados previamente:
+
+\begin{itemize}
+\item El lanzador de proyectiles.
+\item El carro descendiendo por el plano inclinado.
+\end{itemize}
+
+\subsection*{Diseño experimental}
+
+Fijar uno de los siguientes parámetros:
+
+\begin{itemize}
+\item El ángulo del lanzador.
+\item La posición inicial del carro sobre la rampa.
+\end{itemize}
+
+Determinar experimentalmente los valores adecuados de los demás parámetros para lograr la interceptación.
+
+\subsection*{Procedimiento}
+
+\begin{itemize}
+\item Colocar el lanzador en posición fija.
+\item Seleccionar un nivel de potencia previamente caracterizado.
+\item Colocar el carro en una posición inicial sobre la rampa.
+\item Liberar el carro y disparar el proyectil de manera sincronizada.
+\item Observar si ocurre impacto entre el proyectil y el carro.
+\item Ajustar la posición inicial del carro o el momento del disparo.
+\item Repetir el procedimiento hasta lograr que el balín impacte el carro.
+\end{itemize}
+
+\subsection*{Análisis físico}
+
+Para analizar el impacto se deben considerar:
+
+\begin{itemize}
+\item La velocidad inicial del proyectil.
+\item El tiempo de vuelo del proyectil.
+\item La aceleración del carro.
+\item La posición inicial del carro sobre la rampa.
+\end{itemize}
+
+\textbf{Estimar:}
+
+\begin{itemize}
+\item El tiempo en que el proyectil alcanza la altura del carro.
+\item La posición del carro en ese mismo instante.
+\end{itemize}
+
+\subsection*{Resultados esperados}
+
+\begin{itemize}
+\item Registro de los intentos realizados.
+\item Configuración experimental final que produce el impacto.
+\item Análisis teórico comparado con la observación experimental.
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Preguntas orientadoras}
+
+\begin{itemize}
+\item ¿Qué variables determinan el alcance de un proyectil?
+\item ¿Cómo influye el ángulo de lanzamiento en la trayectoria del balín?
+\item ¿Por qué el movimiento horizontal y vertical del proyectil pueden analizarse de manera independiente?
+\item ¿Cómo se determina experimentalmente la aceleración de un objeto en un plano inclinado?
+\item ¿Qué condiciones deben cumplirse para que el proyectil impacte el carro?
+\item ¿Qué fuentes de error pueden afectar la precisión del experimento?
+\item ¿Cómo podrían mejorarse las mediciones utilizando sensores electrónicos?
+\end{itemize}
+
+\rule{\textwidth}{1pt}
+
+\section*{Conclusión esperada}
+
+Al finalizar la práctica, el estudiante deberá comprender cómo caracterizar experimentalmente sistemas físicos independientes y cómo integrar dichos sistemas para resolver un problema dinámico de interceptación entre dos objetos en movimiento. Además, deberá desarrollar habilidades experimentales en medición, análisis de datos y diseño de estrategias de calibración para lograr un objetivo físico específico dentro de un sistema dinámico.

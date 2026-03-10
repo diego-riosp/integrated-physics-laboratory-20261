@@ -58,3 +58,18 @@ jobs:
           asset_path: ./main.pdf
           asset_name: practice-1.pdf
           asset_content_type: application/pdf
+
+      - name: Compile Practice 2 PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: practice-2/main.tex
+
+      - name: Upload Practice 2 PDF
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./main.pdf
+          asset_name: practice-2.pdf
+          asset_content_type: application/pdf

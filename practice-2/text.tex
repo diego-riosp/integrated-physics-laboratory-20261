@@ -66,7 +66,9 @@ Si el carro parte del reposo, su posición sobre la rampa se describe mediante:
 x(t) = \frac{1}{2} a t^2
 \end{equation}
 
-\subsection*{Problema de interceptación}
+\textbf{Importante:} Estas ecuaciones describen el sistema cuando el marco de referencia tiene un grado de libertad paralelo a la dirección de movimiento. \textbf{¡¡En esta práctica, NO se tomará ese marco de referencia!!} \textit{Las ecuaciones deben ser modificadas}.
+
+\subsection*{Problema de intercepción}
 
 Cuando un proyectil es disparado hacia un objeto en movimiento, el impacto ocurre si ambos ocupan la misma posición espacial en el mismo instante de tiempo.
 
@@ -106,111 +108,181 @@ El mini lanzador posee \textbf{tres niveles de potencia}. Debido a posibles vari
 
 \rule{\textwidth}{1pt}
 
-\section*{Actividad I: Caracterización del lanzador de proyectiles}
+\section*{Actividad I: Caracterización del movimiento en un plano inclinado mediante videoanálisis}
 
-\textbf{Objetivo:} Determinar experimentalmente las características cinemáticas del proyectil disparado por el mini lanzador para distintos niveles de potencia.
+\textbf{Objetivo:} Determinar experimentalmente la aceleración del carro mediante el ajuste cuadrático de sus ecuaciones de movimiento $x(t)$ y $y(t)$, y analizar la consistencia de los resultados para distintas condiciones iniciales.
 
 \subsection*{Sistema experimental}
 
-El mini lanzador dispara un balín metálico con una velocidad inicial determinada por el nivel de potencia seleccionado. El proyectil describe una trayectoria parabólica bajo la acción de la gravedad.
+Un carro se deja deslizar desde el reposo sobre un plano inclinado. El movimiento es registrado en video para su posterior análisis utilizando software de videoanálisis.
 
 \subsection*{Procedimiento}
 
 \begin{itemize}
-\item Fijar el lanzador en una mesa o superficie estable.
-\item Ajustar el ángulo de lanzamiento a un valor fijo.
-\item Marcar en el suelo una cinta métrica para medir el alcance horizontal del proyectil.
-\item Colocar una lámina de fórmica o superficie lisa donde impactará el balín.
-\item Seleccionar el primer nivel de potencia del lanzador.
-\item Realizar al menos \textbf{10 disparos} y medir la distancia horizontal alcanzada en cada uno.
-\item Registrar los datos en una tabla.
-\item Repetir el procedimiento para un segundo nivel de potencia.
-\end{itemize}
-
-\textbf{Imperativo:}
-
-\begin{itemize}
-\item Grabar el movimiento del proyectil con una cámara.
-\item Analizar el video con el software \textbf{Tracker}.
-\item Obtener la velocidad inicial y la trayectoria experimental del proyectil.
+\item Ajustar el plano inclinado a un ángulo fijo $\alpha$.
+\item Seleccionar tres alturas iniciales distintas: $h_1$, $h_2$ y $h_3$.
+\item Para cada altura, grabar al menos \textbf{10 videos} del movimiento del carro.
+\item Asegurarse de que:
+  \begin{itemize}
+  \item La cámara esté fija durante la grabación.
+  \item El plano inclinado sea completamente visible.
+  \item Exista una referencia de escala (regla o longitud conocida).
+  \end{itemize}
+\item Importar cada video en el software Tracker.
+\item Calibrar la escala y definir un sistema de referencia adecuado (eje $x$ paralelo al plano inclinado).
+\item Marcar la posición del carro cuadro a cuadro para obtener los datos de posición en función del tiempo.
+\item Exportar los datos $x(t)$ y $y(t)$.
 \end{itemize}
 
 \subsection*{Análisis de datos}
 
-Para cada nivel de potencia:
+Para cada video:
 
 \begin{itemize}
-\item Calcular el alcance promedio.
-\item Determinar la desviación estándar del alcance.
-\item Estimar la velocidad inicial del proyectil utilizando las ecuaciones del movimiento parabólico.
-\item Comparar los resultados obtenidos mediante medición directa y análisis de video.
+\item Ajustar los datos experimentales a funciones cuadráticas de la forma:
+
+\begin{equation}
+x(t) = A_x t^2 + B_x t + C_x
+\end{equation}
+
+\begin{equation}
+y(t) = A_y t^2 + B_y t + C_y
+\end{equation}
+
+\item Registrar los parámetros $A$, $B$ y $C$ obtenidos en cada ajuste.
+\item Interpretar físicamente los parámetros:
+  \begin{itemize}
+  \item $A \propto a$ (relacionado con la aceleración).
+  \item $B \propto v_0$ (relacionado con la velocidad inicial).
+  \item $C \propto r_0$ (relacionado con la posición inicial).
+  \end{itemize}
+\item Determinar la aceleración experimental a partir de las ecuaciones de movimiento del sistema.
+
+\item Calcular el promedio y la desviación estándar de la aceleración para cada altura ($h_1$, $h_2$, $h_3$).
+\item Comparar los valores obtenidos entre sí.
+\item Comparar con el valor teórico.
+\end{itemize}
+
+\subsection*{Análisis adicional}
+
+\begin{itemize}
+\item Analizar si la aceleración depende de la altura inicial.
+\item Discutir posibles fuentes de error:
+  \begin{itemize}
+  \item Fricción
+  \item Precisión en el marcado de puntos
+  \item Resolución temporal del video
+  \end{itemize}
+\item Comparar los valores de $A_y$ con los de $A_x$ y discutir su significado físico.
 \end{itemize}
 
 \subsection*{Resultados esperados}
 
 \begin{itemize}
-\item Tabla o histograma de distancias de impacto.
-\item Alcance promedio del proyectil.
-\item Estimación de la velocidad inicial del balín.
-\item Trayectoria parabólica obtenida con Tracker.
+\item Tablas, histogramas o cualquier método de presentación de datos, con los parámetros $A$, $B$, $C$ para cada video.
+\item Promedios y desviaciones estándar de la aceleración.
+\item Gráficas de $x(t)$ y $y(t)$ y sus ajustes cuadráticos.
+\item Comparación entre resultados experimentales y teóricos.
+\item Discusión sobre la validez del modelo de movimiento uniformemente acelerado.
 \end{itemize}
 
 \rule{\textwidth}{1pt}
 
-\section*{Actividad II: Caracterización del objeto móvil en el plano inclinado}
+\section*{Actividad II: Caracterización del lanzador de proyectiles y del resorte}
 
-\textbf{Objetivo:} Determinar experimentalmente la aceleración del carro que desciende por el plano inclinado.
+\textbf{Objetivo:} Determinar experimentalmente la velocidad de salida de una esfera metálica para distintos niveles de disparo y, a partir de ello, estimar la constante elástica del resorte del lanzador.
 
 \subsection*{Sistema experimental}
 
-Un carro se coloca sobre un plano inclinado y se deja deslizar desde el reposo.
+El mini lanzador impulsa una esfera metálica mediante un resorte comprimido. La velocidad de salida depende del nivel de disparo seleccionado, el cual determina la compresión inicial del resorte.
 
 \subsection*{Procedimiento}
 
+Se debe escoger una de las siguientes opciones experimentales:
+
 \begin{itemize}
-\item Ajustar el ángulo del plano inclinado a un valor determinado.
-\item Medir la longitud total del plano inclinado.
-\item Marcar varias posiciones sobre la rampa utilizando cinta de enmascarar.
-\item Colocar el carro en reposo en la parte superior del plano.
-\item Liberar el carro sin empujarlo.
-\item Medir el tiempo que tarda en recorrer distintas distancias sobre la rampa.
-\item Repetir cada medición al menos \textbf{10 veces}.
+\item \textbf{Opción A:}
+  \begin{itemize}
+  \item Fijar el lanzador en el nivel de disparo 1 y luego en el nivel 2.
+  \item Para cada nivel, realizar \textbf{15 disparos}.
+  \end{itemize}
+
+\item \textbf{Opción B:}
+  \begin{itemize}
+  \item Fijar el lanzador en los niveles de disparo 1, 2 y 3.
+  \item Para cada nivel, realizar \textbf{10 disparos}.
+  \end{itemize}
 \end{itemize}
 
-\textbf{Utilizar:}
+Para cada disparo:
 
 \begin{itemize}
-\item Un sensor conectado al Arduino para registrar automáticamente los tiempos de paso del carro.
-\item Análisis de video mediante Tracker.
+\item Registrar el tiempo de interrupción de la fotocompuerta utilizando Arduino.
+\item Medir la masa de la esfera con una gramera.
+\item Medir el diámetro de la esfera utilizando un pie de rey.
+\item Medir la compresión del resorte para cada nivel de disparo.
+\end{itemize}
+
+\textbf{Opcional (muy opcional):}
+
+\begin{itemize}
+\item Grabar el movimiento del proyectil.
+\item Analizar el video con el software Tracker para obtener la trayectoria y comparar con los resultados obtenidos por la fotocompuerta.
 \end{itemize}
 
 \subsection*{Análisis de datos}
 
 \begin{itemize}
-\item Construir una tabla de distancia recorrida vs tiempo.
-\item Graficar $x$ vs $t^2$.
-\item Ajustar una recta del tipo:
-
+\item Calcular la velocidad de salida de la esfera para cada disparo mediante:
 \begin{equation}
-x = \frac{1}{2} a t^2
+v = \frac{d}{\Delta t}
+\end{equation}
+donde $d$ es el diámetro de la esfera y $\Delta t$ el tiempo de interrupción de la fotocompuerta.
+
+\item Para cada nivel de disparo:
+  \begin{itemize}
+  \item Calcular la velocidad promedio.
+  \item Determinar la desviación estándar.
+  \end{itemize}
+
+\item Considerando conservación de energía:
+\begin{equation}
+\frac{1}{2} k x^2 = \frac{1}{2} m v^2
 \end{equation}
 
-\item Determinar la aceleración del carro a partir de la pendiente.
-\item Comparar el valor obtenido con el valor teórico:
-
+\item Despejar la constante elástica del resorte:
 \begin{equation}
-a = g \sin\alpha
+k = \frac{m v^2}{x^2}
 \end{equation}
 
+\item Calcular el valor de $k$ para cada nivel de disparo.
+
+\item Analizar si el valor de $k$ es consistente entre los distintos niveles.
+\end{itemize}
+
+\subsection*{Análisis adicional}
+
+\begin{itemize}
+\item Discutir posibles fuentes de error:
+  \begin{itemize}
+  \item Pérdidas por fricción
+  \item Energía no transferida completamente a la esfera
+  \item Precisión en la medición de $x$, $d$ y $\Delta t$
+  \end{itemize}
+
+\item Comparar, si se realizó, la velocidad obtenida mediante Tracker con la calculada por la fotocompuerta.
+
+\item Evaluar la validez del modelo de conservación de energía en el sistema real.
 \end{itemize}
 
 \subsection*{Resultados esperados}
 
 \begin{itemize}
-\item Tabla de tiempos medidos.
-\item Gráfica $x$ vs $t^2$.
-\item Ajuste lineal.
-\item Valor experimental de la aceleración del carro.
+\item Tabla de tiempos de interrupción y velocidades calculadas.
+\item Velocidades promedio por nivel de disparo.
+\item Valores estimados de la constante elástica $k$.
+\item Comparación entre distintos niveles de disparo.
+\item Discusión sobre la consistencia del modelo físico.
 \end{itemize}
 
 \rule{\textwidth}{1pt}
@@ -230,14 +302,14 @@ Se combinan los dos sistemas estudiados previamente:
 
 \subsection*{Diseño experimental}
 
-Fijar uno de los siguientes parámetros:
+Fijar los siguientes parámetros:
 
 \begin{itemize}
 \item El ángulo del lanzador.
 \item La posición inicial del carro sobre la rampa.
 \end{itemize}
 
-Determinar experimentalmente los valores adecuados de los demás parámetros para lograr la interceptación.
+Determinar experimentalmente los valores adecuados de los demás parámetros para lograr la intercepción.
 
 \subsection*{Procedimiento}
 
